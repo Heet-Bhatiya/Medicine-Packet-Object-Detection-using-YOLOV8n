@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Packet Drug Name Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Medicine Packet Drug Name Detection</h2>
+    <p class="subtitle">Upload a photo of a medicine packet to identify drug names using YOLOv8.</p>
+
+    <label for="image" class="file-label" id="dropZone">
+      <input type="file" id="image" accept="image/*">
+      <span>Select Image or drag it here</span>
+    </label>
+
+    <div class="preview-wrapper">
+      <img id="preview" class="preview" alt="Image preview">
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <button id="detectBtn" type="button" onclick="predict(event)">Detect</button>
+
+    <div id="spinner" class="spinner hidden"></div>
+
+    <div class="result-wrapper">
+      <img id="result" alt="Detection result">
+    </div>
+
+    <div class="footer">
+      YOLOv8 Object Detection Web App
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
